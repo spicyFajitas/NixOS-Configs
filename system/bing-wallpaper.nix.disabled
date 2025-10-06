@@ -1,0 +1,63 @@
+{ config, pkgs, lib, ... }:
+
+{
+  ##################################
+  # Bing Daily Wallpaper Service (no chmod issue)
+  ##################################
+
+  environment.systemPackages = with pkgs; [
+    curl jq gsettings-desktop-schemas bash
+  ];
+
+  # Deploy the script as an executable in /usr/local/bin
+  environment.systemPackages = with pkgs; [
+    (pkgs.writeShellScriptBin "bing-wallpaper" ''
+      set -euo pipefail
+      TMPDIR="$HOME/.cache/bing-wallpaper"
+      mkdir -p "$TMPDIR"
+
+      JSON_URL="https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
+      IMAGE_URL="https://www.bing.com$(curl -s "$JSON_URL" | jq -r .images[0].url)"
+      FILE="$TMPDIR/wallpaper.jpg"
+
+      curl -s -L "$IMAGE_URL" -o "$FILE"
+      gsettings set org.gnome.desktop.background picture-uri "file://$FILE"
+      gsettings set org.gnome.desktop.background picture-uri-dark "file://$FILE"
+
+      echo "Wallpaper updated: $IMAGE_URL"
+    '')
+  ];
+
+  systemd.user.services.bing-wallpaper = {
+    description = "Fetch and apply Bing daily wallpaper";
+    after = [ "network-online.target" ];
+    wants = [ "network-online.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.bash}/bin/bash -c 'bing-wallpaper'";
+      StandardOutput = "journal";
+      StandardError = "journal";
+    };
+  };
+
+  systemd.user.timers.bing-wallpaper = {
+    description = "Run Bing wallpaper daily";
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnCalendar = "daily";
+      Persistent = true;
+    };
+  };
+
+  systemd.user.services.bing-wallpaper-login = {
+    description = "Run Bing wallpaper at login";
+    after = [ "graphical-session.target" ];
+    wants = [ "graphical-session.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.systemd}/bin/systemctl --user start bing-wallpaper.service";
+    };
+    wantedBy = [ "default.target" ];
+  };
+}
+

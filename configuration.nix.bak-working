@@ -1,0 +1,159 @@
+{ config, pkgs, ... }:
+
+{
+  imports = [ ./hardware-configuration.nix ];
+
+  ##################################
+  # Bootloader and Encryption
+  ##################################
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.initrd.luks.devices."luks-c51c4979-0b74-4edd-a41b-c18dde777470".device =
+    "/dev/disk/by-uuid/c51c4979-0b74-4edd-a41b-c18dde777470";
+
+  ##################################
+  # Host and Networking
+  ##################################
+  networking.hostName = "nixos";
+  networking.networkmanager.enable = true;
+
+  ##################################
+  # Locale and Time
+  ##################################
+  time.timeZone = "America/Detroit";
+  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "en_US.UTF-8";
+    LC_IDENTIFICATION = "en_US.UTF-8";
+    LC_MEASUREMENT = "en_US.UTF-8";
+    LC_MONETARY = "en_US.UTF-8";
+    LC_NAME = "en_US.UTF-8";
+    LC_NUMERIC = "en_US.UTF-8";
+    LC_PAPER = "en_US.UTF-8";
+    LC_TELEPHONE = "en_US.UTF-8";
+    LC_TIME = "en_US.UTF-8";
+  };
+
+  ##################################
+  # Display: GNOME on Wayland
+  ##################################
+  services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;      # GDM (Wayland)
+  services.xserver.desktopManager.gnome.enable = true;     # GNOME Shell
+
+# GNOME panel and window configuration
+services.xserver.desktopManager.gnome.extraGSettingsOverrides = ''
+  [org.gnome.shell]
+  enabled-extensions=['dash-to-panel@jderose9.github.com']
+
+  [org.gnome.shell.extensions.dash-to-panel]
+  panel-position='TOP'
+  panel-size=36
+  transparency-mode='FIXED'
+  intellihide=false
+  hide-top-panel=false
+  show-apps-icon=true
+  multi-monitor=true
+  panel-element-positions='{"left": ["showAppsButton"], "center": ["taskbar"], "right": ["systemMenu", "dateMenu"]}'
+
+  [org.gnome.desktop.wm.preferences]
+  button-layout='appmenu:minimize,maximize,close'
+
+  [org.gnome.desktop.interface]
+  color-scheme='prefer-dark'
+'';
+
+  ##################################
+  # Input / Keyboard
+  ##################################
+  services.xserver.xkb.layout = "us";
+
+  ##################################
+  # Printing and Audio
+  ##################################
+  services.printing.enable = true;
+  security.rtkit.enable = true;
+  services.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
+  ##################################
+  # Users
+  ##################################
+  users.users.adam = {
+    isNormalUser = true;
+    description = "Adam Fulton";
+    extraGroups = [ "networkmanager" "wheel" ];
+  };
+
+  ##################################
+  # Packages and Theming
+  ##################################
+  nixpkgs.config.allowUnfree = true;
+
+environment.systemPackages = with pkgs; [
+  vim
+  wget
+  google-chrome
+  # Ubuntu-like GNOME polish (new package paths)
+  #gnome-tweaks
+  gnome-shell-extensions
+  gnome-software
+  gnome-terminal
+  gnomeExtensions.dash-to-panel
+  nautilus
+  cantarell-fonts
+];
+
+  # Apply Yaru theming (GTK, icons, cursor)
+  environment.sessionVariables = {
+    XDG_CURRENT_DESKTOP = "GNOME";
+  };
+
+
+fonts.packages = with pkgs; [
+  cantarell-fonts
+];
+
+
+  ##################################
+  # Portals (File pickers, screen share, etc.)
+  ##################################
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
+  };
+
+  ##################################
+  # Optional system services
+  ##################################
+  services.packagekit.enable = true;
+
+
+  ##################################
+  # Version
+  ##################################
+  system.stateVersion = "25.05";
+
+# GNOME Keyring integration for Chrome and GNOME
+services.gnome.gnome-keyring.enable = true;
+
+# PAM integration so keyring unlocks automatically on login
+security.pam.services.gdm.enableGnomeKeyring = true;
+security.pam.services.login.enableGnomeKeyring = true;
+
+# Optional environment hint for Chrome
+environment.sessionVariables = {
+  CHROME_DEFAULT_KEYRING = "login";
+  PASSWORD_STORE = "gnome-libsecret";
+  GOOGLE_DEFAULT_KEYRING = "login";
+
+};
+
+}
+
