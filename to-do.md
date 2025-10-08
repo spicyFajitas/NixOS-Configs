@@ -1,6 +1,11 @@
 # To Do List
 
-## Fix
+## Fix Primary
+
+- have grub recognize all installed OS's (ubunut's grub is missing NixOS)
+- alternatively, install different bootloader
+
+## Fix Secondary
 
 - file browser looking at locations other than $HOME
 - bing wallpaper-esque program
