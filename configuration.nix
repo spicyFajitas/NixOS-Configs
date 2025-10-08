@@ -9,6 +9,7 @@
       ./hardware-configuration.nix
      
       ./system/boot.nix
+      ./system/bash-setup.nix
       ./system/locale.nix
       ./system/networking.nix
       ./system/users.nix
