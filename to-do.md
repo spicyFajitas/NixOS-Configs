@@ -13,3 +13,4 @@
 - tabby terminal
 - move applications button to bottom while apps stay on top
 - back up dash-to-panel config
+- window manager snap to top of vertical screen hold makes it half of screen instead of full screen
