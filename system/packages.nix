@@ -25,6 +25,7 @@
     jq
     kubectl
     kubectx
+    minecraft-launcher
     nautilus
     neofetch
     parted
