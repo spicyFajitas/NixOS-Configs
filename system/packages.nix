@@ -31,7 +31,7 @@
     screenfetch
     steam
     tailscale
-    vim-full
+    vim
     vscode
     wget
   ];
