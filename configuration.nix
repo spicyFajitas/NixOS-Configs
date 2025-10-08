@@ -7,25 +7,23 @@
   imports =
     [
       ./hardware-configuration.nix
-     
-      ./system/boot.nix
-      ./system/bash-setup.nix
-      ./system/locale.nix
-      ./system/networking.nix
-      ./system/users.nix
-      ./system/packages.nix
-      ./system/vim.nix
-      ./system/git.nix
-      ./system/mounts.nix
       ./system/audio.nix
-      ./system/printing.nix
+      ./system/bash-setup.nix
+      ./system/boot.nix
+      ./system/git.nix
+      ./system/gnome-customizations.nix
+      ./system/gnome-keybindings.nix
+      ./system/gnome-keyring.nix
+      ./system/gnome-terminal.nix
       ./system/gnome.nix
       ./system/gvfs.nix
-      ./system/gnome-keybindings.nix
-      ./system/gnome-customizations.nix
-      ./system/gnome-terminal.nix
-      ./system/gnome-keyring.nix
+      ./system/locale.nix
+      ./system/mounts.nix
+      ./system/networking.nix
+      ./system/packages.nix
       ./system/services.nix
+      ./system/users.nix
+      ./system/vim.nix
     ];
   
   environment.sessionVariables = {
