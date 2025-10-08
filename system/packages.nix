@@ -9,7 +9,7 @@
   environment.systemPackages = with pkgs; [
     cantarell-fonts
     cifs-utils
-    cinnamon.nemo
+    nemo
     curl
     discord
     efibootmgr
@@ -24,7 +24,7 @@
     gsettings-desktop-schemas
     hdparm
     jq
-    kdePackages.dolphin
+    libsForQt5.dolphin
     kubectl
     kubectx
     nautilus
