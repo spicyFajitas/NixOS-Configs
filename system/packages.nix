@@ -17,7 +17,7 @@
     gnome-terminal
     gnome-tweaks
     gnomeExtensions.appindicator
-    gnomeExtensions.bing-wallpaper-changer
+    gnomeExtensions.daily-bing-wallpaper
     gnomeExtensions.dash-to-panel
     google-chrome
     gsettings-desktop-schemas
