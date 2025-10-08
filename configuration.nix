@@ -27,6 +27,10 @@
       ./system/gnome-keyring.nix
       ./system/services.nix
     ];
+  
+  environment.sessionVariables = {
+    GTK_USE_PORTAL = "0";
+  };
 
   ##################################
   # XDG Portals (used for file pickers, screenshots, screen share, etc.)
@@ -36,15 +40,11 @@
     extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
   };
 
-  ##################################
-  # PackageKit (software updates & management backend)
-  ##################################
-  services.packagekit.enable = true;
 
   ##################################
   # System State Version
   # This value determines the NixOS release compatibility level.
   ##################################
-  system.stateVersion = "25.05"; # Did you read the comment?
+  system.stateVersion = "25.05";
 }
 
