@@ -6,6 +6,7 @@
   # tailscale
   services.tailscale.enable = true;
 
-
+  # printing
+  services.printing.enable = true;
 }
 

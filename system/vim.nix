@@ -4,8 +4,6 @@
   ##################################
   # Vim Editor Configuration (2-space indentation)
   ##################################
-  environment.systemPackages = with pkgs; [ vim ];
-
   environment.etc."vimrc".text = ''
     " --- General Settings ---
     syntax on
