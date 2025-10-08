@@ -28,6 +28,10 @@
     steam
     gsettings-desktop-schemas
     gnomeExtensions.appindicator
+    efibootmgr
+    parted
+    hdparm
+    tailscale
   ];
 
   # Environment variables

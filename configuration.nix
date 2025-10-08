@@ -24,6 +24,7 @@
       ./system/gnome-customizations.nix
       ./system/gnome-terminal.nix
       ./system/gnome-keyring.nix
+      ./system/services.nix
     ];
 
   ##################################

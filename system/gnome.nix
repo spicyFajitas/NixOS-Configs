@@ -18,7 +18,7 @@
 
     [org.gnome.shell.extensions.dash-to-panel]
     panel-position='TOP'
-    panel-size=36
+    panel-size=32
     transparency-mode='FIXED'
     intellihide=false
     hide-top-panel=false
