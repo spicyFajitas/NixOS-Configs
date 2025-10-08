@@ -24,6 +24,7 @@
     hdparm
     jq
     kubectl
+    kubectx
     nautilus
     neofetch
     parted
