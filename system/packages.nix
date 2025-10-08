@@ -25,10 +25,10 @@
     jq
     kubectl
     kubectx
-    minecraft
     nautilus
     neofetch
     parted
+    prismlauncher
     screenfetch
     steam
     tailscale
