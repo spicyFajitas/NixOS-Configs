@@ -11,7 +11,7 @@
     enable = true;
     efiSupport = true;
     devices = [ "nodev" ];       # Use EFI, not a specific disk (important)
-    useOSProber = true;          # Automatically detect Ubuntu/Windows/Arch etc.
+    useOSProber = false;          # Automatically detect Ubuntu/Windows/Arch etc.
   };
 
   boot.loader.grub.extraEntries = ''
