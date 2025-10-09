@@ -27,6 +27,7 @@
     kubectx
     nautilus
     neofetch
+    os-prober
     parted
     prismlauncher
     screenfetch
