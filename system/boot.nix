@@ -36,7 +36,6 @@
       initrd /boot/initrd.img
     }
   '';
-    ec48986e-46ac-4da0-982f-d3efcd901d09
 
   boot.initrd.luks.devices."luks-c51c4979-0b74-4edd-a41b-c18dde777470".device =
     "/dev/disk/by-uuid/c51c4979-0b74-4edd-a41b-c18dde777470";
