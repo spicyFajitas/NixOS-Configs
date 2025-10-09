@@ -32,6 +32,7 @@
     prismlauncher
     screenfetch
     steam
+    sushi
     tailscale
     variety
     vim
