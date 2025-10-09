@@ -25,7 +25,7 @@
       insmod ext2
 
       # Search for and unlock the encrypted partition by UUID
-      set root_uuid="ec48986e-46ac-4da0-982f-d3efcd901d09"  # Replace with the encrypted partition's UUID
+      set root_uuid="629b57d8-dab1-4f35-927e-72401a65ecb7"  # Replace with the encrypted partition's UUID
       cryptomount -u $root_uuid
 
       # Set the root to the decrypted logical volume (if using LVM) or partition
