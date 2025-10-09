@@ -33,6 +33,7 @@
     screenfetch
     steam
     tailscale
+    variety
     vim
     vscode
     wget
