@@ -16,7 +16,6 @@
       ./system/gnome-keyring.nix
       ./system/gnome-terminal.nix
       ./system/gnome.nix
-      ./system/gvfs.nix
       ./system/locale.nix
       ./system/mounts.nix
       ./system/networking.nix
