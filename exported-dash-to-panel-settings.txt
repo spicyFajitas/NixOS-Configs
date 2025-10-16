@@ -1,10 +1,10 @@
 [/]
 animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
-appicon-margin=8
+appicon-margin=6
 appicon-padding=4
 dot-position='LEFT'
 dot-style-focused='DOTS'
-dot-style-unfocused='SQUARES'
+dot-style-unfocused='DOTS'
 extension-version=68
 global-border-radius=0
 group-apps=true
@@ -21,7 +21,7 @@ panel-lengths='{"AOC-0x0003ae3f":100,"AOC-0x0002fd34":100,"DEL-KW14V61T5VNB":100
 panel-positions='{"AOC-0x0003ae3f":"LEFT","AOC-0x0002fd34":"LEFT","DEL-KW14V61T5VNB":"LEFT"}'
 panel-side-margins=0
 panel-side-padding=0
-panel-sizes='{"AOC-0x0003ae3f":36,"AOC-0x0002fd34":36,"DEL-KW14V61T5VNB":36}'
+panel-sizes='{"AOC-0x0003ae3f":38,"AOC-0x0002fd34":38,"DEL-KW14V61T5VNB":38}'
 panel-top-bottom-margins=0
 panel-top-bottom-padding=0
 prefs-opened=true

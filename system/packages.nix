@@ -22,6 +22,7 @@
     google-chrome
     gsettings-desktop-schemas
     hdparm
+    htop
     jq
     kubectl
     kubectx
@@ -38,7 +39,7 @@
     vscode
     wget
   ];
-
+  programs.steam.enable = true;
   # Environment variables
   environment.sessionVariables = {
     XDG_CURRENT_DESKTOP = "GNOME";
