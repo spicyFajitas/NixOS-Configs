@@ -18,6 +18,7 @@
     gnome-tweaks
     gnomeExtensions.appindicator
     gnomeExtensions.daily-bing-wallpaper
+    gnomeExtensions.gsconnect
     gnomeExtensions.dash-to-panel
     google-chrome
     gsettings-desktop-schemas
