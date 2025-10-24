@@ -6,7 +6,7 @@
     [Desktop Entry]
     Name=Tabby Terminal
     Exec=${config.home.homeDirectory}/Applications/tabby.AppImage
-    Icon=tabby
+    Icon=${config.home.homeDirectory}/Pictures/icons/tabby.png
     Type=Application
     Categories=Utility;TerminalEmulator;
     StartupNotify=true
