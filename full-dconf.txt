@@ -195,7 +195,7 @@ night-light-schedule-automatic=false
 sleep-inactive-ac-timeout=1800
 
 [org/gnome/shell]
-app-picker-layout="[{'65808f86-b22a-405a-89f7-489901e41077': <{'position': <0>}>, 'Utilities': <{'position': <1>}>, 'System': <{'position': <2>}>, 'nixos-manual.desktop': <{'position': <3>}>, 'steam.desktop': <{'position': <4>}>}]\n"
+app-picker-layout=[{'65808f86-b22a-405a-89f7-489901e41077': <{'position': <0>}>, '77ebc3e7-5467-4386-b6bc-86bea964227d': <{'position': <1>}>, 'Utilities': <{'position': <2>}>, 'System': <{'position': <3>}>, 'org.gnome.tweaks.desktop': <{'position': <4>}>, 'variety.desktop': <{'position': <5>}>, 'org.prismlauncher.PrismLauncher.desktop': <{'position': <6>}>, 'nixos-manual.desktop': <{'position': <7>}>, 'tabby.desktop': <{'position': <8>}>}]
 command-history=['R', 'r']
 enabled-extensions=['dash-to-panel@jderose9.github.com', 'appindicatorsupport@rgcjonas.gmail.com']
 favorite-apps=['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'discord.desktop', 'code.desktop', 'org.gnome.Settings.desktop']
