@@ -10,7 +10,6 @@
     cantarell-fonts
     cifs-utils
     curl
-    discord
     efibootmgr
     gnome-shell-extensions
     gnome-software
@@ -41,7 +40,10 @@
     vscode
     wget
   ];
+
   programs.steam.enable = true;
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
 
   home-manager.users.adam = {
     programs.home-manager.enable = true;

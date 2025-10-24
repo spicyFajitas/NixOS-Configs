@@ -13,7 +13,7 @@
       ./config/boot.nix
       ./config/dconf-backup.nix
       ./config/git.nix
-      ./config/gnome-customizations.nix
+      # ./config/gnome-customizations.nix
       ./config/gnome-keybindings.nix
       ./config/gnome-keyring.nix
       ./config/gnome-terminal.nix

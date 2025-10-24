@@ -50,10 +50,10 @@
       favorite-apps = [
         "google-chrome.desktop"
         "org.gnome.Nautilus.desktop"
-        "org.gnome.Terminal.desktop"
-        "discord.desktop"
+        "tabby.desktop"
         "code.desktop"
         "org.gnome.Settings.desktop"
+        "steam.desktop"
       ];
       remember-mount-password = false;
       welcome-dialog-last-shown-version = "48.2";
