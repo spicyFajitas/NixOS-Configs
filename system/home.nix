@@ -69,7 +69,70 @@
       extension-version = 68;
       global-border-radius = 0;
       group-apps = true;
+      hotkeys-ov      animate-appicon-hover-animation-extent = "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
+      appicon-margin = 8;
+      appicon-padding = 4;
+      dot-position = "LEFT";
+      dot-style-focused = "DOTS";
+      dot-style-unfocused = "DOTS";
+      extension-version = 68;
+      global-border-radius = 0;
+      group-apps = true;
       hotkeys-overlay-combo = "TEMPORARILY";
+      intellihide = false;
+      isolate-monitors = true;
+      isolate-workspaces = true;
+      multi-monitors = true;
+      overview-click-to-exit = false;
+      panel-anchors = ''
+        {"AOC-0x0003ae3f":"MIDDLE","AOC-0x0002fd34":"MIDDLE","DEL-KW14V61T5VNB":"MIDDLE"}
+      '';
+      panel-element-positions = ''
+        {"AOC-0x0003ae3f":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":false,"position":"stackedBR"},{"element":"systemMenu","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}],"AOC-0x0002fd34":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":false,"position":"stackedBR"},{"element":"systemMenu","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}],"DEL-KW14V61T5VNB":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":false,"position":"stackedBR"},{"element":"systemMenu","visible":false,"position":"stackedBR"},{"element":"desktopButton","visible":false,"position":"stackedBR"}]}
+      '';
+      panel-element-positions-monitors-sync = true;
+      panel-lengths = ''
+        {"AOC-0x0003ae3f":35,"AOC-0x0002fd34":35,"DEL-KW14V61T5VNB":35}
+      '';
+      panel-positions = ''
+        {"AOC-0x0003ae3f":"LEFT","AOC-0x0002fd34":"LEFT","DEL-KW14V61T5VNB":"LEFT"}
+      '';
+      panel-side-margins = 0;
+      panel-side-padding = 0;
+      panel-sizes = ''
+        {"AOC-0x0003ae3f":62,"AOC-0x0002fd34":62,"DEL-KW14V61T5VNB":62}
+      '';
+      panel-top-bottom-margins = 0;
+      panel-top-bottom-padding = 0;
+      prefs-opened = false;
+      primary-monitor = "AOC-0x0003ae3f";
+      progress-show-count = true;
+      secondarymenu-contains-appmenu = true;
+      secondarymenu-contains-showdetails = false;
+      show-apps-icon-file = "";
+      show-apps-icon-side-padding = 8;
+      show-apps-override-escape = true;
+      show-favorites = true;
+      show-favorites-all-monitors = false;
+      show-running-apps = true;
+      show-tooltip = true;
+      show-window-previews = true;
+      stockgs-force-hotcorner = false;
+      stockgs-keep-dash = true;
+      stockgs-keep-top-panel = true;
+      stockgs-panelbtn-click-only = false;
+      trans-bg-color = "#99c1f1";
+      trans-dynamic-anim-target = 0.7;
+      trans-gradient-bottom-color = "#ff7800";
+      trans-gradient-top-color = "#c01c28";
+      trans-gradient-top-opacity = 0.3;
+      trans-panel-opacity = 0.55;
+      trans-use-custom-bg = false;
+      trans-use-custom-gradient = false;
+      trans-use-custom-opacity = true;
+      trans-use-dynamic-opacity = true;
+      tray-padding = -1;
+      window-preview-title-position = "TOP";erlay-combo = "TEMPORARILY";
       intellihide = false;
       isolate-monitors = true;
       isolate-workspaces = true;
