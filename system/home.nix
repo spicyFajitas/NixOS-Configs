@@ -69,14 +69,6 @@
       extension-version = 68;
       global-border-radius = 0;
       group-apps = true;
-      appicon-margin = 8;
-      appicon-padding = 4;
-      dot-position = "LEFT";
-      dot-style-focused = "DOTS";
-      dot-style-unfocused = "DOTS";
-      extension-version = 68;
-      global-border-radius = 0;
-      group-apps = true;
       hotkeys-overlay-combo = "TEMPORARILY";
       intellihide = false;
       isolate-monitors = true;
