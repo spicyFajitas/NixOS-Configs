@@ -124,6 +124,11 @@
       trans-use-dynamic-opacity = true;
       tray-padding = -1;
       window-preview-title-position = "TOP";erlay-combo = "TEMPORARILY";
+      intellihide = false;
+      isolate-monitors = true;
+      isolate-workspaces = true;
+      multi-monitors = true;
+      overview-click-to-exit = false;
       panel-anchors = ''
         {"AOC-0x0003ae3f":"MIDDLE","AOC-0x0002fd34":"MIDDLE","DEL-KW14V61T5VNB":"MIDDLE"}
       '';
