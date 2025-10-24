@@ -69,6 +69,7 @@
       extension-version = 68;
       global-border-radius = 0;
       group-apps = true;
+      hotkeys-ov      animate-appicon-hover-animation-extent = "{'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}";
       appicon-margin = 8;
       appicon-padding = 4;
       dot-position = "LEFT";
