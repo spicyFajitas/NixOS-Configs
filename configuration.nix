@@ -31,7 +31,7 @@
       ./system/home.nix
       ./system/dconf-settings.nix
     ];
-  };
+  }
  
   environment.sessionVariables = {
     GTK_USE_PORTAL = "0";
