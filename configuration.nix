@@ -6,7 +6,7 @@
 {
   imports =
     [
-      <home-manager/nixos>
+      # <home-manager/nixos>
       ./hardware-configuration.nix
       ./system/audio.nix
       ./system/bash-setup.nix
