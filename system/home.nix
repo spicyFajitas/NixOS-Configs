@@ -1,9 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  dconf.settings = {
-
-{
+  # Create Tabby desktop launcher
   home.file.".local/share/applications/tabby.desktop".text = ''
     [Desktop Entry]
     Name=Tabby Terminal
@@ -14,9 +12,9 @@
     StartupNotify=true
     Comment=Modern terminal for local shells, SSH, and serial connections
   '';
-}
 
-
+  # GNOME settings
+  dconf.settings = {
     "org/gnome/control-center" = {
       last-panel = "mouse";
       window-state = "(980, 640, true)";
@@ -183,3 +181,4 @@
     };
   };
 }
+

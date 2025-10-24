@@ -6,6 +6,7 @@
 {
   imports =
     [
+      <home-manager/nixos>
       ./hardware-configuration.nix
       ./system/audio.nix
       ./system/bash-setup.nix
@@ -25,9 +26,7 @@
       ./system/vim.nix
     ];
  
-  home-manager.users.adam = {  # change 'adam' to your username
-    home.stateVersion = "25.05";
-  };
+  home-manager.users.adam = import ./system/home.nix;
  
   environment.sessionVariables = {
     GTK_USE_PORTAL = "0";
