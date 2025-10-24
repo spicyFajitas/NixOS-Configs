@@ -38,6 +38,7 @@
     variety
     vim
     vscode
+    warp-terminal
     wget
   ];
 
