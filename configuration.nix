@@ -27,7 +27,6 @@
  
   home-manager.users.adam = {  # change 'adam' to your username
     home.stateVersion = "25.05";
-    programs.home-manager.enable = true;
   };
  
   environment.sessionVariables = {
