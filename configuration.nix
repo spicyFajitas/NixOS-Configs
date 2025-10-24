@@ -6,30 +6,34 @@
 {
   imports =
     [
+      <home-manager/nixos>
       ./hardware-configuration.nix
-      ./system/audio.nix
-      ./system/bash-setup.nix
-      ./system/boot.nix
-      ./system/git.nix
-      ./system/gnome-customizations.nix
-      ./system/gnome-keybindings.nix
-      ./system/gnome-keyring.nix
-      ./system/gnome-terminal.nix
-      ./system/gnome.nix
-      ./system/locale.nix
-      ./system/mounts.nix
-      ./system/networking.nix
-      ./system/packages.nix
-      ./system/services.nix
-      ./system/users.nix
-      ./system/vim.nix
+      ./config/audio.nix
+      ./config/bash-setup.nix
+      ./config/boot.nix
+      ./config/dconf-backup.nix
+      ./config/git.nix
+      ./config/gnome-customizations.nix
+      ./config/gnome-keybindings.nix
+      ./config/gnome-keyring.nix
+      ./config/gnome-terminal.nix
+      ./config/gnome.nix
+      ./config/locale.nix
+      ./config/mounts.nix
+      ./config/networking.nix
+      ./config/packages.nix
+      ./config/services.nix
+      ./config/users.nix
+      ./config/vim.nix
     ];
  
-  home-manager.users.adam = {  # change 'adam' to your username
-    home.stateVersion = "25.05";
-    programs.home-manager.enable = true;
+  home-manager.users.adam = {
+    imports = [
+      ./config/home.nix
+      ./config/dash-to-panel.nix
+    ];
   };
- 
+
   environment.sessionVariables = {
     GTK_USE_PORTAL = "0";
   };
@@ -41,7 +45,6 @@
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gnome ];
   };
-
 
   ##################################
   # System State Version
