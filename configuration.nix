@@ -6,11 +6,12 @@
 {
   imports =
     [
-      # <home-manager/nixos>
+      <home-manager/nixos>
       ./hardware-configuration.nix
       ./system/audio.nix
       ./system/bash-setup.nix
       ./system/boot.nix
+      ./system/dconf-settings.nix
       ./system/git.nix
       ./system/gnome-customizations.nix
       ./system/gnome-keybindings.nix
@@ -26,12 +27,7 @@
       ./system/vim.nix
     ];
  
-  home-manager.users.adam = {
-    imports = [
-      ./system/home.nix
-      ./system/dconf-settings.nix
-    ];
-  }
+  home-manager.users.adam = import ./system/home.nix;
  
   environment.sessionVariables = {
     GTK_USE_PORTAL = "0";
