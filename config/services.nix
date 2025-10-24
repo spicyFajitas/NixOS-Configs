@@ -14,5 +14,6 @@
   services.avahi.enable = true; # Helps discover network shares via mDNS
   services.udisks2.enable = true;
   
+  services.flatpak.enable = true;
 }
 
