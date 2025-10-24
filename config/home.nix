@@ -5,7 +5,7 @@
   home.file.".local/share/applications/tabby.desktop".text = ''
     [Desktop Entry]
     Name=Tabby Terminal
-    Exec=${config.home.homeDirectory}/Applications/tabby.AppImage
+    Exec=${config.home.homeDirectory}/Applications/tabby.AppImage --no-sandbox
     Icon=${config.home.homeDirectory}/Pictures/icons/tabby.png
     Type=Application
     Categories=Utility;TerminalEmulator;
