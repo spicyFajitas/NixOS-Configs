@@ -23,6 +23,7 @@
     google-chrome
     gsettings-desktop-schemas
     hdparm
+    home-manager
     htop
     jq
     kubectl

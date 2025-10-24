@@ -24,7 +24,12 @@
       ./system/users.nix
       ./system/vim.nix
     ];
-  
+ 
+  home-manager.users.adam = {  # change 'adam' to your username
+    home.stateVersion = "25.05";
+    programs.home-manager.enable = true;
+  };
+ 
   environment.sessionVariables = {
     GTK_USE_PORTAL = "0";
   };
