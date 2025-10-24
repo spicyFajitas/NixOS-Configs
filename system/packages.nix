@@ -41,13 +41,7 @@
     vscode
     wget
   ];
-
   programs.steam.enable = true;
-  
-  home-manager.users.adam = {
-    programs.home-manager.enable = true;
-  };
-  
   # Environment variables
   environment.sessionVariables = {
     XDG_CURRENT_DESKTOP = "GNOME";
