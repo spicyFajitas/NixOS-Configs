@@ -11,6 +11,7 @@
       ./system/audio.nix
       ./system/bash-setup.nix
       ./system/boot.nix
+      ./system/dconf-settings.nix
       ./system/git.nix
       ./system/gnome-customizations.nix
       ./system/gnome-keybindings.nix
@@ -29,7 +30,7 @@
   home-manager.users.adam = {
     imports = [
       ./system/home.nix
-      ./system/dconf-settings.nix
+      # ./system/dconf-settings.nix
     ];
   };
  
