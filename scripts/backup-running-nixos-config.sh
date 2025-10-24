@@ -3,7 +3,7 @@ set -euo pipefail
 
 # === Configurable Variables ===
 SRC="/etc/nixos"                       # Source: your live NixOS config
-DEST="$HOME/Documents/code/NixOS-Configs"  # Destination repo clone
+DEST="$HOME/Documents/code/nixos-configs"  # Destination repo clone
 GIT_REMOTE="git@github.com:spicyFajitas/nixos-config.git"  # Change to your repo URL
 BRANCH="main"                          # Git branch name
 

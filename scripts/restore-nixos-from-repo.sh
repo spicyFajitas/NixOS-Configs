@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_DIR="$HOME/Documents/code/NixOS-Configs"
+REPO_DIR="$HOME/Documents/code/nixos-configs"
 SYSTEM_DIR="/etc/nixos"
 GIT_REMOTE="git@github.com:spicyFajitas/nixos-config.git"
 BRANCH="main"
